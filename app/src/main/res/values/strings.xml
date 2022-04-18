@@ -6,4 +6,6 @@
     <string name="hello_pop_fragment">Hello Pop fragment</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="todo">Media Description</string>
+    <string name="track">Track</string>
 </resources>

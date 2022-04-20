@@ -1,7 +1,6 @@
 package com.example.spotify
 
 import android.app.AlertDialog
-import android.graphics.Color
 import android.media.AudioManager
 import android.media.MediaPlayer
 import android.os.Bundle
@@ -45,10 +44,10 @@ class MediaFragmentLayout(private val typeMedia: String) : Fragment() {
         val view = inflater.inflate(R.layout.fragment_media_layout, container, false)
 
         initViews(view)
-        getMedia(typeMedia)
+        getGenericMedia(typeMedia)
 
         swipe.setOnRefreshListener {
-            getMedia(typeMedia)
+            getGenericMedia(typeMedia)
         }
 
         return view
@@ -61,7 +60,7 @@ class MediaFragmentLayout(private val typeMedia: String) : Fragment() {
         swipe = view.findViewById(R.id.srl_refresh)
     }
 
-    private fun getMedia(type: String) {
+    private fun getGenericMedia(type: String) {
         swipe.isRefreshing = true
         MediaApi.initRetrofit().findMedia(
             type,
